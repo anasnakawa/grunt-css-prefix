@@ -37,6 +37,12 @@ grunt.initConfig({
 
 ### Options
 
+#### options.prefix
+Type: `String`
+Default value: `''`
+
+Prefix any class name in the target file with this prefix.
+
 #### options.separator
 Type: `String`
 Default value: `',  '`
@@ -59,9 +65,9 @@ grunt.initConfig({
   css_prefix: {
     options: {},
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
+      'dest/animate.lib.css': ['bower_components/animate.css/animate.css']
+    }
+  }
 })
 ```
 
@@ -72,13 +78,12 @@ In this example, custom options are used to do something else with whatever else
 grunt.initConfig({
   css_prefix: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
+      prefix: 'lib-name'
     },
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
+      'dest/animate.lib.css': ['bower_components/animate.css/animate.css']
+    }
+  }
 })
 ```
 
@@ -86,4 +91,5 @@ grunt.initConfig({
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+
+* 0.1.0: basic prefix usage
