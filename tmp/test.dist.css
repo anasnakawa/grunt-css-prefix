@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+
+.libname-animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.libname-foo.libname-bar {
+  display: none;
+}
+
+h1.libname-nice {
+  color: red;
+}
+
+@-webkit-keyframes libname-shake {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-10px);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(10px);
+  }
+}
+
+.libname-something.libname-shake {
+  -webkit-animation-name: libname-shake;
+  -moz-animation-name: libname-shake;
+  -ms-animation-name: libname-shake;
+  -o-animation-name: libname-shake;
+  animation-name: libname-shake;
+}

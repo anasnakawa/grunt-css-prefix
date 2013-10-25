@@ -16,34 +16,35 @@ module.exports = function(grunt) {
       all: [
         'Gruntfile.js',
         'tasks/*.js',
-        '<%= nodeunit.tests %>',
+        '<%= nodeunit.tests %>'
       ],
       options: {
-        jshintrc: '.jshintrc',
-      },
+        jshintrc: '.jshintrc'
+      }
     },
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: ['tmp'],
+      tests: ['tmp']
     },
 
     // Configuration to be run (and then tested).
     css_prefix: {
       animate: {
         options: {
-          prefix: 'libname-'
+          prefix: 'libname-',
+          processName: 'dasherize'
         },
         files: {
-          'css/animate.dist.css': ['bower_components/animate.css/animate.css']
-        },
-      },
+          'tmp/test.dist.css': ['test/test.css']
+        }
+      }
     },
 
     // Unit tests.
     nodeunit: {
-      tests: ['test/*_test.js'],
-    },
+      tests: ['test/*_test.js']
+    }
 
   });
 

@@ -43,6 +43,12 @@ Default value: `''`
 
 Prefix any class name in the target file with this prefix.
 
+#### options.processName
+Type: `String`
+Default value: `'dasherize'`
+
+process the prefixed class name with any of [underscore.string](https://github.com/epeli/underscore.string) methods
+
 #### options.separator
 Type: `String`
 Default value: `',  '`
@@ -63,28 +69,34 @@ In this example, the default options are used to do something with whatever. So 
 ```js
 grunt.initConfig({
   css_prefix: {
-    options: {},
+    options: {
+      prefix: 'libname-'
+    },
     files: {
-      'dest/animate.lib.css': ['bower_components/animate.css/animate.css']
+      'dest/style.css': ['css/style.css']
     }
   }
 })
 ```
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+* **`style.css` before**:
 
-```js
-grunt.initConfig({
-  css_prefix: {
-    options: {
-      prefix: 'lib-name'
-    },
-    files: {
-      'dest/animate.lib.css': ['bower_components/animate.css/animate.css']
-    }
-  }
-})
+```css
+.foo,
+.Bar,
+h1 {
+  display: none;
+}
+```
+
+* **`style.css` after**:
+
+```css
+.libname-foo,
+.libname-bar,
+h1 {
+  display: none;
+}
 ```
 
 ## Contributing

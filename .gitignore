@@ -2,8 +2,15 @@
 node_modules/
 npm-debug.log
 
+# bower
+bower_components/
+
+
 # os files
 *.DS_Store
 
 # editor files
 *.sublime-workspace
+
+# temp files
+temp/

@@ -9,20 +9,24 @@
 
 module.exports = function( grunt ) {
 
-  var prefix = require('./prefix');
+  var prefixer = require('../lib/prefixer');
 
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
   grunt.registerMultiTask( 'css_prefix', 'prefixing css using rework', function() {
+
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
         punctuation: ''
       , separator: ''
       , prefix: ''
+      , processName: 'dasherize'
+      , vendor: [ '-webkit-', '-moz-', '-ms-', '-o-' ]
     });
 
-    // Iterate over all specified file groups.
+    // process each file individually after
+    // doing a common checking on each file
     this.files.forEach( function( f ) {
       // Concat specified files.
       var src = f.src.filter( function( filepath ) {
@@ -40,14 +44,25 @@ module.exports = function( grunt ) {
       src += options.punctuation;
 
       // call out our prefixer
-      src = prefix( src, options );
+      try {
+        
+        src = prefixer( src, options );
+        // Write the destination file.
+        grunt.file.write( f.dest, src );
 
-      // Write the destination file.
-      grunt.file.write( f.dest, src );
-
-      // Print a success message.
-      grunt.log.writeln( 'File "' + f.dest + '" created.' );
+        // Print a success message.
+        grunt.log.writeln( 'File "' + f.dest + '" created.' );
+      
+      } catch ( e ) {
+          console.log( e );
+          var err = new Error( 'Prefix failed.' );
+          if ( e.msg ) {
+            err.message += ', ' + e.msg + '.';
+          }
+          err.origError = e;
+          grunt.log.warn( 'Prefixing source "' + src + '" failed.' );
+          grunt.fail.warn( err );
+      }
     });
   });
-
 };
