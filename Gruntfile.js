@@ -60,6 +60,9 @@ module.exports = function(grunt) {
   // plugin's task(s), then test the result.
   grunt.registerTask('test', ['clean', 'css_prefix', 'nodeunit']);
 
+  // specific task for travis
+  grunt.registerTask('travis', ['clean', 'css_prefix']);
+
   // By default, lint and run all tests.
   // grunt.registerTask('default', ['jshint', 'test']);
   grunt.registerTask('default', ['css_prefix']);
