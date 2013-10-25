@@ -1,4 +1,4 @@
-# grunt-css-prefix
+# grunt-css-prefix [![Build Status](https://travis-ci.org/anasnakawa/grunt-css-prefix.png)](https://travis-ci.org/anasnakawa/grunt-css-prefix.png)
 
 > prefixing css using rework
 
