@@ -14,7 +14,7 @@ npm install grunt-css-prefix --save-dev
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-rework-css-prefix');
+grunt.loadNpmTasks('grunt-css-prefix');
 ```
 
 ## The "css_prefix" task
@@ -107,3 +107,4 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 * 0.1.0: basic prefix usage
 * 0.1.1: tested with node unit
+* 0.1.3: 
