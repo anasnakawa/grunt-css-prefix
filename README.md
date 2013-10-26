@@ -106,5 +106,4 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 
 * 0.1.0: basic prefix usage
-* 0.1.1: tested with node unit
-* 0.1.3: 
+* 0.1.2: tested with node unit
