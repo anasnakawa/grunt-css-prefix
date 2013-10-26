@@ -64,7 +64,8 @@ A string value that is used to do something else with whatever else.
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+
+In this example, we'll prefix all classes with `libname-`, also each class name will be dasherized so `className` will become `class-name`.
 
 ```js
 grunt.initConfig({
