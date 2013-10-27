@@ -85,7 +85,8 @@ grunt.initConfig({
 ```css
 .foo,
 .Bar,
-h1 {
+h1,
+#someId {
   display: none;
 }
 ```
@@ -95,7 +96,8 @@ h1 {
 ```css
 .libname-foo,
 .libname-bar,
-h1 {
+h1,
+#someId{
   display: none;
 }
 ```
