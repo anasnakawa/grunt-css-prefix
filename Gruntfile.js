@@ -33,7 +33,8 @@ module.exports = function(grunt) {
       animate: {
         options: {
           prefix: 'libname-',
-          processName: 'dasherize'
+          processName: 'dasherize',
+          strip: 'fa-'
         },
         files: {
           'test/tmp/test.dist.css': [ 'test/test.css' ]

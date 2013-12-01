@@ -26,6 +26,13 @@ exports[ 'prefixedKeyFrames' ] = function( test ) {
 	test.done();
 }
 
+// striping
+exports[ 'stripRules' ] = function( test ) {
+	test.ok( testFile.indexOf( '.fa-' ) === -1 );
+	test.ok( testFile.indexOf( '.libname-icon .libname-anchor' ) !== -1 );
+	test.done();
+}
+
 // processing names
 exports[ 'dasherizedNames' ] = function( test ) {
 	test.ok( ( testFile.split( '.' )[ 1 ].indexOf( 'animated-nicely' ) !== -1 ), 'class names are dasherized' );

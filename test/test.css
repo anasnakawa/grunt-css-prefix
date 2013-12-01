@@ -9,6 +9,10 @@
 	display: none;
 }
 
+.so .hot {
+	position: absolute;
+}
+
 h1.nice {
 	color: red;
 }
@@ -24,4 +28,8 @@ h1.nice {
 	-moz-animation-name: shake;
 	-o-animation-name: shake;
 	animation-name: shake;
+}
+
+.fa-icon .fa-anchor {
+	color: blue;
 }

@@ -21,6 +21,7 @@ module.exports = function( grunt ) {
         punctuation: ''
       , separator: ''
       , prefix: ''
+      , strip: ''
       , processName: 'dasherize'
       , vendor: [ '-webkit-', '-moz-', '-ms-', '-o-' ]
     });

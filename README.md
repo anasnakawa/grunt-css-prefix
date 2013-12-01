@@ -1,4 +1,4 @@
-# grunt-css-prefix [![Build Status](https://travis-ci.org/anasnakawa/grunt-css-prefix.png)](https://travis-ci.org/anasnakawa/grunt-css-prefix.png)
+# grunt-css-prefix 0.2.0 [![Build Status](https://travis-ci.org/anasnakawa/grunt-css-prefix.png)](https://travis-ci.org/anasnakawa/grunt-css-prefix.png)
 
 > prefixing css using rework
 
@@ -43,6 +43,12 @@ Default value: `''`
 
 Prefix any class name in the target file with this prefix.
 
+#### options.strip
+Type: `String`
+Default value: `''`
+
+Strip any class name from a given string.
+
 #### options.processName
 Type: `String`
 Default value: `'dasherize'`
@@ -71,7 +77,8 @@ In this example, we'll prefix all classes with `libname-`, also each class name 
 grunt.initConfig({
   css_prefix: {
     options: {
-      prefix: 'libname-'
+      prefix: 'libname-',
+    strip: 'legacy-'      
     },
     files: {
       'dest/style.css': ['css/style.css']
@@ -85,6 +92,7 @@ grunt.initConfig({
 ```css
 .foo,
 .Bar,
+.legacy-thing,
 h1 {
   display: none;
 }
@@ -95,6 +103,7 @@ h1 {
 ```css
 .libname-foo,
 .libname-bar,
+.libname-thing,
 h1 {
   display: none;
 }
@@ -107,3 +116,4 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 * 0.1.0: basic prefix usage
 * 0.1.2: tested with node unit
+* 0.2.0: added strip option / fixes prefix
