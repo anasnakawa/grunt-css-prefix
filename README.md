@@ -1,4 +1,4 @@
-# grunt-css-prefix 0.2.0 [![Build Status](https://travis-ci.org/anasnakawa/grunt-css-prefix.png)](https://travis-ci.org/anasnakawa/grunt-css-prefix.png)
+# grunt-css-prefix 0.2.1 [![Build Status](https://travis-ci.org/anasnakawa/grunt-css-prefix.png)](https://travis-ci.org/anasnakawa/grunt-css-prefix.png)
 
 > prefixing css using rework
 
@@ -117,3 +117,4 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 * 0.1.0: basic prefix usage
 * 0.1.2: tested with node unit
 * 0.2.0: added strip option / fixes prefix
+* 0.2.1: fixed dependencies in package.json

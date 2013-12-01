@@ -1,7 +1,7 @@
 {
   "name": "grunt-css-prefix",
   "description": "prefixing css using rework",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "",
   "author": {
     "name": "Anas Nakawa",
@@ -31,14 +31,16 @@
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-clean": "~0.4.0",
     "grunt-contrib-nodeunit": "~0.2.0",
-    "grunt": "~0.4.1",
-    "rework": "~0.18.1",
-    "underscore.string": "~2.3.3"
+    "grunt": "~0.4.1"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"
   },
   "keywords": [
     "gruntplugin"
-  ]
+  ],
+  "dependencies": {
+    "rework": "~0.18.3",
+    "underscore.string": "~2.3.3"
+  }
 }
