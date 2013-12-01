@@ -78,7 +78,7 @@ grunt.initConfig({
   css_prefix: {
     options: {
       prefix: 'libname-',
-    strip: 'legacy-'      
+      strip: 'legacy-'      
     },
     files: {
       'dest/style.css': ['css/style.css']
