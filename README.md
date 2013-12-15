@@ -25,12 +25,14 @@ In your project's Gruntfile, add a section named `css_prefix` to the data object
 ```js
 grunt.initConfig({
   css_prefix: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
+    libname: {
+      options: {
+        // Task-specific options go here.
+      },
+      your_target: {
+        // Target-specific file lists and/or options go here.
+      }
+    }
   },
 })
 ```
@@ -76,12 +78,14 @@ In this example, we'll prefix all classes with `libname-`, also each class name 
 ```js
 grunt.initConfig({
   css_prefix: {
-    options: {
-      prefix: 'libname-',
-      strip: 'legacy-'      
-    },
-    files: {
-      'dest/style.css': ['css/style.css']
+    thirdparty: {
+      options: {
+        prefix: 'libname-',
+        strip: 'legacy-'      
+      },
+      files: {
+        'dest/style.css': ['css/style.css']
+      }
     }
   }
 })
