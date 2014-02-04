@@ -1,7 +1,7 @@
 /*
  * prefixer nodeunit test
  * -----------------------
- * Copyright (c) 2013 Anas Nakawa
+ * Copyright (c) 2014 Anas Nakawa
  * Licensed under the MIT license.
  */
 
