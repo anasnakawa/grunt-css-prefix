@@ -33,3 +33,9 @@ h1.nice {
 .fa-icon .fa-anchor {
 	color: blue;
 }
+
+@media (min-width: 768px) {
+  .media-query-style {
+    font-size: 21px;
+  }
+}

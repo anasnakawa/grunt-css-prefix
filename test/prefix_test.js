@@ -44,3 +44,10 @@ exports[ 'dasherizedNames' ] = function( test ) {
 	test.ok( ( testFile.split( '.' )[ 1 ].indexOf( 'animated-nicely' ) !== -1 ), 'class names are dasherized' );
 	test.done();
 }
+
+// media queries
+// -------------
+exports[ 'mediaQueries' ] = function( test ) {
+	test.ok( testFile.match(/.libname-media-query-style/), 'styles inside a media query are prefixed' )
+	test.done();
+}
