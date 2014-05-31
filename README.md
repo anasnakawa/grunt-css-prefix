@@ -1,4 +1,4 @@
-# grunt-css-prefix 0.2.1 [![Build Status](https://travis-ci.org/anasnakawa/grunt-css-prefix.png)](https://travis-ci.org/anasnakawa/grunt-css-prefix.png)  [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+# grunt-css-prefix 0.2.2 [![Build Status](https://travis-ci.org/anasnakawa/grunt-css-prefix.png)](https://travis-ci.org/anasnakawa/grunt-css-prefix.png)  [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 > prefixing css using rework
 
