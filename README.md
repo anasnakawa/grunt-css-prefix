@@ -122,3 +122,4 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 * 0.1.2: tested with node unit
 * 0.2.0: added strip option / fixes prefix
 * 0.2.1: fixed dependencies in package.json
+* 0.2.3: prefixing media queries
