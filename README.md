@@ -55,7 +55,7 @@ Strip any class name from a given string.
 Type: `String`
 Default value: `'dasherize'`
 
-process the prefixed class name with any of [underscore.string](https://github.com/epeli/underscore.string) methods
+Process the prefixed class name with any of [underscore.string](https://github.com/epeli/underscore.string) methods, otherwise do nothing when value is falsy (`''`, `false`, etc.)
 
 #### options.separator
 Type: `String`
@@ -81,7 +81,7 @@ grunt.initConfig({
     thirdparty: {
       options: {
         prefix: 'libname-',
-        strip: 'legacy-'      
+        strip: 'legacy-'
       },
       files: {
         'dest/style.css': ['css/style.css']
